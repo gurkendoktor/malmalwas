@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-var io = require('../..')(server);
+var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
 
 server.listen(port, function () {
@@ -13,7 +13,10 @@ server.listen(port, function () {
 app.use(express.static(__dirname + '/public'));
 
 // SOCKET.IO real time server
-var io = require('socket.io').listen(8080);
+//var io = require('socket.io').listen(8080);
+
+
+var users = [];
 
 	io.sockets.on('connection', function (socket) {
 		console.log('connection from ' + socket.id);

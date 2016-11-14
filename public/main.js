@@ -17,13 +17,12 @@
            user.drawSize = parseInt(e.target.value, 10);
 	        socket.emit('propertychange',user)
         };
-        var socket = io.connect('188.226.133.237:8010',function(){
-            console.log('on connect');
-        });
+        var socket = io();
 
 		socket.on('connect', function(data){
-			user.id = socket.socket.sessionid;
-            user.sessionid = socket.socket.sessionid;
+            console.log(socket);
+			user.id = socket.id;
+            user.sessionid = socket.id;
         });
 
 		socket.on('propertychange', function(data){
@@ -50,6 +49,6 @@
         });
 
         var container = document.getElementById('canvas');
-        canvasContext  = init(socket, container, 400, 300, '#fafafa');
+        canvasContext  = init(socket, container, 800, 450, '#03A9F4');
 
 	}
