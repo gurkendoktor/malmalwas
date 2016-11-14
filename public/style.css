@@ -1,0 +1,40 @@
+		h1 {
+			font-family: "Helvetica Neue";
+			font-weight: normal;
+			font-size: 48px;
+		}
+
+		#canvas {
+			border: 1px solid #333;
+			width: 800px;
+			height: 450px;
+			float: left;
+		}
+
+		#chat {
+			width: 200px;
+			height: 300px;
+			border: 1px solid #333;
+			padding-left: 14px;
+			float: left;
+			overflow: auto;;
+		}
+
+		#chat_input {
+			width: 650px;
+			height: 20px;
+
+			float: left;
+			clear: both;
+		}
+
+		#chat_input input {
+			width: 500px;
+			height: 20px;
+			border: 1px solid #333;
+		}
+
+		#chat_input input.submit {
+			width: 110px;
+			height: 20px;
+		}
