@@ -11,3 +11,6 @@ _malmalwas_ (german: "just draw something") is a socket.io demo for real-time co
 ## Test
 
 No tests so far.
+
+## Demo
+A demo is available at <http://malmalwas.matthiashaak.com:3000/>
